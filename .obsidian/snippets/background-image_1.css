@@ -1,0 +1,221 @@
+/* =========================================================
+   🎯 Glass Minimal Theme – Stable & Click Safe Version
+   Markdown 전용 글래스 카드
+   Excalidraw 완전 복구
+   Canvas 정상
+   ========================================================= */
+
+
+/* =========================================================
+   1️⃣ 배경 이미지
+   ========================================================= */
+
+body {
+    background-image: url("https://images.pexels.com/photos/1874636/pexels-photo-1874636.jpeg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+
+/* =========================================================
+   2️⃣ 전역 투명화 (안전 범위만)
+   ========================================================= */
+
+body.theme-dark {
+    --background-primary: transparent !important;
+    --background-primary-alt: transparent !important;
+    --background-secondary: transparent !important;
+    --background-secondary-alt: transparent !important;
+}
+
+.app-container,
+.horizontal-main-container,
+.workspace,
+.workspace-split,
+.workspace-leaf,
+.workspace-tab-header-container,
+.workspace-tabs,
+.view-header {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   3️⃣ 사이드바 & 리본
+   ========================================================= */
+
+.workspace-ribbon,
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+    background-color: rgba(10,10,10,0.55) !important;
+    backdrop-filter: blur(8px) !important;
+    border-right: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+.workspace-ribbon {
+    background-color: rgba(5,5,5,0.7) !important;
+    padding-top: 45px !important;
+}
+
+.nav-file-title,
+.nav-folder-title,
+.tree-item-inner {
+    color: rgba(230,230,230,0.9) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+    background-color: rgba(255,255,255,0.08) !important;
+}
+
+
+/* =========================================================
+   4️⃣ Markdown 카드 UI (여기만 글래스 적용)
+   ========================================================= */
+
+.workspace-leaf-content[data-type="markdown"] .view-content {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 30px 5% !important;
+    background: transparent !important;
+}
+
+/* Markdown 카드 박스 */
+.workspace-leaf-content[data-type="markdown"] 
+.markdown-reading-view,
+.workspace-leaf-content[data-type="markdown"] 
+.markdown-source-view {
+
+    max-width: 1100px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+
+    border-radius: 24px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Markdown 글래스 효과 */
+.workspace-leaf-content[data-type="markdown"] 
+.markdown-reading-view::before,
+.workspace-leaf-content[data-type="markdown"] 
+.markdown-source-view::before {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: rgba(15,15,15,0.85);
+    backdrop-filter: blur(30px) saturate(120%);
+    border-radius: 24px;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+}
+
+.cm-scroller,
+.markdown-preview-view {
+    padding: 50px !important;
+}
+
+
+/* =========================================================
+   5️⃣ 표 가독성
+   ========================================================= */
+
+.markdown-preview-view table,
+.markdown-source-view table {
+    border-collapse: collapse !important;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.markdown-preview-view th,
+.markdown-source-view th {
+    background-color: rgba(255,255,255,0.1);
+    color: white !important;
+    padding: 10px;
+    text-align: center;
+}
+
+.markdown-preview-view td,
+.markdown-source-view td {
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 8px 12px;
+    color: #eee !important;
+}
+
+
+/* =========================================================
+   6️⃣ 팝업 / 메뉴
+   ========================================================= */
+
+.modal,
+.popover,
+.prompt,
+.suggestion-container,
+.menu {
+    background-color: #202020 !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8) !important;
+}
+
+.menu-item:hover,
+.menu-item.selected {
+    background-color: rgba(255,255,255,0.1) !important;
+}
+
+
+/* =========================================================
+   🚑 7️⃣ Excalidraw 완전 복구 (클릭 문제 해결)
+   ========================================================= */
+
+/* flex 제거 */
+.workspace-leaf-content[data-type="excalidraw"] .view-content {
+    display: block !important;
+    padding: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+/* 가상요소 완전 차단 */
+.workspace-leaf-content[data-type="excalidraw"] *::before,
+.workspace-leaf-content[data-type="excalidraw"] *::after {
+    display: none !important;
+}
+
+/* wrapper 기본화 */
+.workspace-leaf-content[data-type="excalidraw"] 
+.excalidraw-wrapper,
+.workspace-leaf-content[data-type="excalidraw"] 
+.excalidraw-container {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+/* canvas 클릭 보장 */
+.workspace-leaf-content[data-type="excalidraw"] canvas {
+    pointer-events: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+}
+
+
+/* =========================================================
+   8️⃣ Obsidian Canvas 복구
+   ========================================================= */
+
+.workspace-leaf-content[data-type="canvas"] .view-content {
+    display: block !important;
+    padding: 0 !important;
+}
+
+.canvas-node-content {
+    background: rgba(20,20,20,0.85) !important;
+    border-radius: 18px !important;
+    backdrop-filter: blur(20px);
+}

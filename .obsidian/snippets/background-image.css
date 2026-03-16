@@ -1,0 +1,259 @@
+/* ================================
+   🎯 Minimal 테마 배경 및 가독성 개선 (애플 스타일 라운드 코너 + 컨텍스트 메뉴 가독성 해결)
+   ================================ */
+
+/* 1) 배경 이미지 설정 */
+body {
+    background-image: url("https://images.pexels.com/photos/1874636/pexels-photo-1874636.jpeg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important; 
+}
+
+/* 2) 기본 레이어 강제 투명화 */
+body.theme-dark {
+    --bg1: transparent !important;
+    --bg2: transparent !important;
+    --bg3: transparent !important;
+    --ui1: transparent !important;
+    --ui2: transparent !important;
+    --background-primary: transparent !important;
+    --background-primary-alt: transparent !important;
+    --background-secondary: transparent !important;
+    --background-secondary-alt: transparent !important;
+    --background-modifier: transparent !important;
+}
+
+.app-container,
+.horizontal-main-container,
+.workspace,
+.workspace-split,
+.workspace-leaf,
+.workspace-tab-header-container,
+.workspace-tabs,
+.view-header {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* =========================================================
+   🛠️ 메뉴 및 사이드바 (버튼 위치 복구)
+   ========================================================= */
+
+/* 3) 사이드바 및 리본 메뉴 */
+.workspace-ribbon, 
+.workspace-split.mod-left-split, 
+.workspace-split.mod-right-split {
+    background-color: rgba(10, 10, 10, 0.5) !important;
+    backdrop-filter: blur(8px) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+    
+    z-index: 10 !important; 
+}
+
+/* 리본(아이콘 바) 설정 */
+.workspace-ribbon {
+    background-color: rgba(5, 5, 5, 0.7) !important; 
+    padding-top: 45px !important; 
+}
+
+/* 파일 목록 글씨 */
+.nav-file-title, 
+.nav-folder-title,
+.tree-item-inner {
+    color: rgba(230, 230, 230, 0.85) !important;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+.nav-file-title:hover, 
+.nav-folder-title:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* =========================================================
+   📝 메인 노트 영역 (애플 스타일 라운드 코너 + 블렌딩)
+   ========================================================= */
+
+/* 4) 가운데 떠 있는 카드 영역 */
+.view-content {
+    background-color: transparent !important;
+    padding: 30px 5% !important; 
+    display: flex !important;
+    justify-content: center !important; 
+    
+    z-index: 1 !important; 
+}
+
+/* 노트 박스 디자인 */
+.markdown-reading-view,
+.markdown-source-view {
+    max-width: 1100px !important; 
+    width: 100% !important;
+    margin: 0 auto !important;
+    height: 100% !important;
+    
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    
+    /* [수정] 모서리를 더 둥글게 (애플 스타일) */
+    border-radius: 24px !important;
+    
+    position: relative !important;
+    overflow: hidden !important; 
+}
+
+/* [핵심 수정] 둥근 모서리에 맞춘 사각형 그라데이션 마스크 */
+.markdown-reading-view::before, 
+.markdown-source-view::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    
+    background-color: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(30px) saturate(120%);
+    
+    /* [수정] 부모 요소의 둥근 모서리를 따라가도록 설정 */
+    border-radius: 24px !important;
+    
+    /* 마스크 모양 */
+    -webkit-mask-image: radial-gradient(rectangle at center, black 80%, transparent 100%);
+    mask-image: radial-gradient(rectangle at center, black 80%, transparent 100%);
+    
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+}
+
+.cm-scroller, 
+.markdown-preview-view {
+    padding: 50px !important;
+}
+
+/* =========================================================
+   📊 표(Table) 가독성 유지
+   ========================================================= */
+
+.markdown-preview-view table,
+.markdown-source-view table,
+.cm-content table {
+    border-collapse: collapse !important;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.markdown-preview-view th,
+.markdown-source-view th,
+.cm-content th {
+    background-color: rgba(255, 255, 255, 0.1) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px !important;
+}
+
+.markdown-preview-view td,
+.markdown-source-view td,
+.cm-content td {
+    border: 1px solid rgba(255, 255, 255, 0.05) !important; 
+    color: #eeeeee !important;
+    padding: 8px 12px !important;
+}
+
+.markdown-preview-view tr:nth-child(even),
+.markdown-source-view tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.markdown-preview-view tr:hover,
+.markdown-source-view tr:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* =========================================================
+   🔧 설정창(Modal) 및 컨텍스트 메뉴(Context Menu) 설정
+   ========================================================= */
+
+/* 5) 설정창 뒤 '투명 배경' 설정 (클릭 가능) */
+.modal-bg {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    pointer-events: auto !important; 
+}
+
+/* 6) 설정창 및 팝업 본체 (불투명) */
+.modal,
+.popover,
+.prompt,
+.suggestion-container {
+    background-color: #202020 !important; 
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 12px !important; /* 팝업창도 살짝 둥글게 */
+}
+
+/* 오른쪽 마우스 클릭 메뉴(Context Menu) 불투명화 */
+.menu {
+    background-color: #202020 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: none !important; 
+    border-radius: 10px !important; /* 메뉴도 둥글게 */
+}
+
+.menu-item:hover,
+.menu-item.selected {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.vertical-tab-header {
+    background-color: #181818 !important; 
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.vertical-tab-content {
+    background-color: transparent !important;
+}
+
+/* =========================================================
+   🖼️ 캔버스(Canvas) 디자인 적용 (사각형 마스크 + 라운드)
+   ========================================================= */
+
+.canvas-wrapper,
+.canvas-background {
+    background-color: transparent !important;
+}
+
+.canvas-node-content {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    
+    /* [수정] 캔버스 카드도 둥글게 */
+    border-radius: 24px !important;
+    
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* 캔버스 카드에도 동일한 사각형 마스크 적용 */
+.canvas-node-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    
+    background-color: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(30px) saturate(120%);
+    
+    /* [수정] 둥근 모서리 적용 */
+    border-radius: 24px !important;
+    
+    /* 마스크 모양을 '사각형'으로 변경 */
+    -webkit-mask-image: radial-gradient(rectangle at center, black 80%, transparent 100%);
+    mask-image: radial-gradient(rectangle at center, black 80%, transparent 100%);
+    
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.5); 
+}

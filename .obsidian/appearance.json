@@ -1,1 +1,6 @@
-{}
+{
+  "enabledCssSnippets": [
+    "background-image_1"
+  ],
+  "accentColor": "#f5995c"
+}
