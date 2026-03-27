@@ -24,6 +24,9 @@ cycle:
 financials: "[[1. HIMS 분석.xlsx]]"
 latest_earnings: 2026-02-23
 upcoming_earnings: 2026-05-04
+price: "19.33"
+shares: "400"
+status: holding
 ---
 
 ## 💡 투자이유

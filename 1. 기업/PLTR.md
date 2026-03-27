@@ -18,6 +18,9 @@ cycle:
 financials: "[[1. PLTR 분석.xlsx]]"
 latest_earnings: 2026-02-02
 upcoming_earnings: 2026-05-02
+shares: "143.06"
+price: "100"
+status: holding
 ---
 
 ## 💡 투자이유

@@ -25,6 +25,9 @@ cycle:
 financials: "[[1. GOOG 분석.xlsx]]"
 latest_earnings: 2026-02-04
 upcoming_earnings: 2026-04-28
+price: "273.60"
+shares: "50"
+status: holding
 ---
 
 ## 💡 투자이유

@@ -16,6 +16,9 @@ cycle: []
 financials: "[[1. TSLA 분석.xlsx]]"
 latest_earnings: 2026-01-29
 upcoming_earnings: 2026-04-22
+price: "361.38"
+shares: "150"
+status: holding
 ---
 
 ## 💡 투자이유

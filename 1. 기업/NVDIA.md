@@ -22,6 +22,9 @@ cycle:
 financials: "[[1. NVDA 분석.xlsx]]"
 latest_earnings: 2026-02-25
 upcoming_earnings: 2026-05-20
+price: "167.52"
+shares: "250"
+status: holding
 ---
 
 ## 💡 투자이유

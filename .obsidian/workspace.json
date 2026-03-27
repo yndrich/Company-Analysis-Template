@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5. 템플릿/기업.md",
-                "mode": "source",
+                "file": "0. 마스터/Portfolio Dashboard.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "기업"
+              "title": "Portfolio Dashboard"
             }
           }
         ]
@@ -210,19 +210,21 @@
   },
   "active": "d356d198e069eaa7",
   "lastOpenFiles": [
-    "5. 템플릿/행정명령 및 법안.md",
-    "5. 템플릿/어닝콜.md",
-    "5. 템플릿/스크랩.md",
-    "5. 템플릿/로비.md",
-    "5. 템플릿/기업.md",
-    "0. 마스터/Company Dashboard.md",
     "1. 기업/TESLA.md",
     "1. 기업/PLTR.md",
     "1. 기업/NVDIA.md",
     "1. 기업/META.md",
-    "1. 기업/GOOGLE.md",
     "1. 기업/HIMS.md",
+    "1. 기업/GOOGLE.md",
     "1. 기업/COIN.md",
+    "1. 기업/CASH.md",
+    "0. 마스터/Portfolio Dashboard.md",
+    "0. 마스터/Company Dashboard.md",
+    "5. 템플릿/기업.md",
+    "5. 템플릿/로비.md",
+    "5. 템플릿/스크랩.md",
+    "5. 템플릿/어닝콜.md",
+    "5. 템플릿/행정명령 및 법안.md",
     "3. 어닝콜/PLTR/PLTR_2024Q1_summary.md",
     "4. 거시경제/스크랩/리포트/2025-07-03_달러약세가 가져올 방향은_요약.md",
     "4. 거시경제/스크랩/영상/2025-08-03_침체 우려, 최악 폭락 노보노·유나헬.md",
@@ -253,8 +255,6 @@
     "10. Excalidraw libraries",
     "9. 기타저장/Pasted image 20251228121740.png",
     "9. 기타저장",
-    "4. 거시경제/인물/미국_행정부/미국_행정부_47기.md",
-    "4. 거시경제/정책/미국_행정명령/90FR8767_미국판 아이언 돔 구축.md",
     "4. 거시경제/스크랩/리포트/2025-11-30_AI 헤게모니 사이클 길어야 100일.pdf"
   ]
 }

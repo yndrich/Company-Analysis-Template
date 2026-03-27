@@ -14,6 +14,9 @@ cycle: []
 financials: "[[1. COIN 분석.xlsx]]"
 latest_earnings: 2026-02-12
 upcoming_earnings: 2026-04-30
+price: "160.66"
+shares: "50"
+holding: holding
 ---
 
 ## 💡 투자이유

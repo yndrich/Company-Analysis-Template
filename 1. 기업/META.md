@@ -19,6 +19,9 @@ cycle:
 financials: "[[1. META 분석.xlsx]]"
 latest_earnings: 2026-01-28
 upcoming_earnings: 2026-04-29
+price: "525.72"
+shares: "50"
+status: holding
 ---
 
 ## 💡 투자이유
