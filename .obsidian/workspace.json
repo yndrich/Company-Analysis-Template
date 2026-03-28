@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5. 템플릿/기업.md",
-                "mode": "preview",
+                "file": "0. 마스터/Portfolio Dashboard.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "기업"
+              "title": "Portfolio Dashboard"
             }
           }
         ]
@@ -210,6 +210,8 @@
   },
   "active": "d356d198e069eaa7",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2026-03-17 05.38.55.excalidraw.md",
+    "5. 템플릿/기업.md",
     "0. 마스터/Portfolio Dashboard.md",
     "1. 기업/TESLA.md",
     "1. 기업/PLTR.md",
@@ -220,7 +222,6 @@
     "1. 기업/COIN.md",
     "1. 기업/CASH.md",
     "0. 마스터/Company Dashboard.md",
-    "5. 템플릿/기업.md",
     "5. 템플릿/로비.md",
     "5. 템플릿/스크랩.md",
     "5. 템플릿/어닝콜.md",
@@ -243,7 +244,6 @@
     "4. 거시경제/스크랩/영상/2025-12-28_소수몽키 2026년도 상반기 특강.md",
     "4. 거시경제/스크랩/영상/2025-12-21_악재 무사히 소화.md",
     "4. 거시경제/스크랩/영상/2025-12-14_대장주 후보들.md",
-    "Excalidraw/Drawing 2026-03-17 05.38.55.excalidraw.md",
     "Excalidraw",
     "3. 어닝콜/NVDIA/NVDA_2026Q3_transcript.md",
     "10. Excalidraw libraries/system-design.excalidrawlib",
