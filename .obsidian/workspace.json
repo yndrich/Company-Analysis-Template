@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "0. 마스터/Portfolio Dashboard.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -208,11 +208,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d356d198e069eaa7",
+  "active": "dfb526ee360b1a7d",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-03-17 05.38.55.excalidraw.md",
     "5. 템플릿/기업.md",
     "0. 마스터/Portfolio Dashboard.md",
+    "Excalidraw/Drawing 2026-03-17 05.38.55.excalidraw.md",
     "1. 기업/TESLA.md",
     "1. 기업/PLTR.md",
     "1. 기업/NVDIA.md",
