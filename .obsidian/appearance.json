@@ -2,5 +2,9 @@
   "enabledCssSnippets": [
     "background-image_1"
   ],
-  "accentColor": "#f5995c"
+  "accentColor": "#f5995c",
+  "baseFontSize": 16,
+  "baseFontSizeAction": true,
+  "theme": "obsidian",
+  "cssTheme": "Minimal"
 }

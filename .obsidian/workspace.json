@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. 마스터/Portfolio Dashboard.md",
+                "file": "0. 마스터/Company Dashboard.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Portfolio Dashboard"
+              "title": "Company Dashboard"
             }
           }
         ]
@@ -192,7 +192,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,28 +209,34 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "dfb526ee360b1a7d",
+  "active": "d356d198e069eaa7",
   "lastOpenFiles": [
-    "5. 템플릿/기업.md",
     "0. 마스터/Portfolio Dashboard.md",
-    "Excalidraw/Drawing 2026-03-17 05.38.55.excalidraw.md",
+    "0. 마스터/Company Dashboard.md",
+    "1. 기업/V.md",
     "1. 기업/TESLA.md",
+    "1. 기업/TEM.md",
+    "1. 기업/SGOV.md",
+    "1. 기업/RKLB.md",
     "1. 기업/PLTR.md",
     "1. 기업/NVDIA.md",
+    "1. 기업/MSFT.md",
     "1. 기업/META.md",
+    "1. 기업/HOOD.md",
     "1. 기업/HIMS.md",
     "1. 기업/GOOGLE.md",
+    "1. 기업/FOXA.md",
+    "1. 기업/DLTR.md",
     "1. 기업/COIN.md",
+    "4. 거시경제/스크랩/책/2026-04-10_넥서스.md",
+    "1. 기업/OXY.md",
     "1. 기업/CASH.md",
-    "0. 마스터/Company Dashboard.md",
+    "5. 템플릿/기업.md",
+    "Excalidraw/Drawing 2026-03-17 05.38.55.excalidraw.md",
     "5. 템플릿/로비.md",
     "5. 템플릿/스크랩.md",
     "5. 템플릿/어닝콜.md",
     "5. 템플릿/행정명령 및 법안.md",
-    "3. 어닝콜/PLTR/PLTR_2024Q1_summary.md",
-    "4. 거시경제/스크랩/리포트/2025-07-03_달러약세가 가져올 방향은_요약.md",
-    "4. 거시경제/스크랩/영상/2025-08-03_침체 우려, 최악 폭락 노보노·유나헬.md",
-    "4. 거시경제/스크랩/책/2025-08-30_먼나라이웃나라 일본편.md",
     "9. 기타저장/Pasted image 20250902194156.png",
     "9. 기타저장/Pasted image 20250902194211.png",
     "9. 기타저장/Pasted image 20250902194228.png",
@@ -239,13 +246,7 @@
     "9. 기타저장/Pasted image 20251228121208.png",
     "9. 기타저장/Pasted image 20251229061224.png",
     "9. 기타저장/Pasted image 20251229061313.png",
-    "4. 거시경제/인물/미국_연준/미국_연준_47기.md",
-    "4. 거시경제/스크랩/영상/2026-01-04_트럼프 베네수엘라 공습.md",
-    "4. 거시경제/스크랩/영상/2025-12-28_소수몽키 2026년도 상반기 특강.md",
-    "4. 거시경제/스크랩/영상/2025-12-21_악재 무사히 소화.md",
-    "4. 거시경제/스크랩/영상/2025-12-14_대장주 후보들.md",
     "Excalidraw",
-    "3. 어닝콜/NVDIA/NVDA_2026Q3_transcript.md",
     "10. Excalidraw libraries/system-design.excalidrawlib",
     "10. Excalidraw libraries/stick-figures.excalidrawlib",
     "10. Excalidraw libraries/software-architecture.excalidrawlib",

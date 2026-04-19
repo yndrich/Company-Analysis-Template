@@ -68,74 +68,39 @@ SORT date(announce_date) DESC
 ```
 
 
-## ⚖️ 관련 법안 및 행정명령
+```dataviewjs
+const pages = dv.pages('"4. 거시경제/스크랩"');
 
-```dataview
-TABLE WITHOUT ID
-  link(file.link, summary) AS 요약,
-  choice(contains(file.folder, "미국_법안"), "법안", "행정명령") AS 구분,
-  dateformat(default(date, file.mtime), "yyyy-MM-dd") AS 날짜,
-  join(
-    filter(
-      default(tags, file.tags),
-      (t) => contains(
-        map(default(this.tags, this.file.tags), (x) => lower(string(x))),
-        lower(string(t))
-      )
-    ),
-    ", "
-  ) AS 공통태그
-FROM "6. 거시경제/정책/미국_법안" OR "6. 거시경제/정책/미국_행정명령"
-WHERE any(
-  default(tags, file.tags),
-  (t) => contains(
-    map(default(this.tags, this.file.tags), (x) => lower(string(x))),
-    lower(string(t))
-  )
-)
-SORT type, date DESC
+dv.header(2, "🌍 거시경제 스크랩");
+
+let list = [];
+
+// 현재 파일명 (소문자로 변환)
+const currentFile = dv.current().file.name.toLowerCase();
+
+for (let page of pages) {
+  let content = await dv.io.load(page.file.path);
+  let lines = content.split("\n");
+
+  for (let line of lines) {
+
+    // 🔥 대소문자 무시 비교
+    if (!line.toLowerCase().includes(currentFile)) continue;
+
+    let match = line.match(/\^([\w-]+)/);
+    let blockId = match ? match[1] : null;
+
+    if (blockId) {
+
+      let cleanQuote = line.replace(/\s*\^[\w-]+/, "").trim();
+      let source = page.file.name.replace(/^\d{4}-\d{2}-\d{2}_/, "");
+
+      let link = `[[${page.file.name}#^${blockId}|(${source})]]`;
+
+      list.push(`${cleanQuote} ${link}`);
+    }
+  }
+}
+
+dv.list(list);
 ```
-
-## 📰 관련 스크랩
-
-```dataview
-TABLE WITHOUT ID
-  link(file.link, summary) AS 요약,
-  choice(contains(file.folder, "리포트"), "리포트", choice(contains(file.folder,"영상"),"영상","리포트")) AS 구분,
-  dateformat(default(date, file.mtime), "yyyy-MM-dd") AS 날짜,
-  join(
-    filter(
-      default(tags, file.tags),
-      (t) => contains(
-        map(default(this.tags, this.file.tags), (x) => lower(string(x))),
-        lower(string(t))
-      )
-    ),
-    ", "
-  ) AS 공통태그
-FROM "6. 거시경제/스크랩"
-WHERE any(
-  default(tags, file.tags),
-  (t) => contains(
-    map(default(this.tags, this.file.tags), (x) => lower(string(x))),
-    lower(string(t))
-  )
-)
-SORT type, date DESC
-```
-
-## 👥 로비 내역
-
-```dataview
-table without ID
-link(file.link,title) AS "분류",
-year+"_"+quarter+"Q" AS "시기", 
-dateformat(date,"yyyy-MM-dd") AS "날짜",
-lobbyist AS "로비스트",
-amounts AS "금액",
-		tags AS "요약"
-from "4. 로비/로비내역/COIN"
-where contains(file.name, "로비내역")
-sort date desc
-```
-
